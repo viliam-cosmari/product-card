@@ -1,0 +1,121 @@
+@use "variables" as *;
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: $white;
+  border-radius: 1.5rem;
+  border: 1px solid rgba($deep-blue, 0.08);
+
+  &__image {
+    position: relative;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__badge {
+    color: $off-white;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    background: $blue;
+    font-size: 0.8rem;
+    font-weight: 700;
+  }
+
+  &__number {
+    position: absolute;
+    top: 1rem;
+    right: 1.25rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: $blue;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 1.25rem 1rem 1rem;
+  }
+
+  &__name {
+    margin: 0 0 0.75rem;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: $deep-blue;
+  }
+  &__short-description {
+    margin: 0 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    color: $text-muted;
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__tag {
+    padding: 0.35rem 0.75rem;
+    border: 1px solid $border;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  &__price-list {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid $border-light;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: $blue;
+
+    &--old {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: $text-light;
+      text-decoration: line-through;
+    }
+  }
+  &--light {
+    .product__badge {
+      background: $green;
+      color: $deep-blue;
+    }
+    .product__number {
+      color: $light-green;
+    }
+  }
+
+  &--dark {
+    .product__badge {
+      background: $deep-blue;
+      color: $white;
+    }
+    .product__number {
+      color: $deep-blue;
+    }
+  }
+}

@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Satoshi";
+  src: url(/assets/fonts/fonts/Satoshi-Variable.woff2) format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  margin: 0;
+  font-family: "Satoshi", system-ui, sans-serif;
+  color: #000033;
+  background: #f5f7f5;
+  padding: 40px 16px;
+}
+
+.products {
+  max-width: 75rem;
+  margin: 0 auto;
+}
+.products__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.5rem;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  background: #ffffff;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(0, 0, 51, 0.08);
+}
+.product__image {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.product__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.product__badge {
+  color: #eeffee;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  background: #000066;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.product__number {
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #000066;
+}
+.product__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 1.25rem 1rem 1rem;
+}
+.product__name {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #000033;
+}
+.product__short-description {
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #4a4f75;
+}
+.product__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  list-style: none;
+}
+.product__tag {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid #e1e8e1;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.product__price-list {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid #ebf0eb;
+}
+.product__price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #000066;
+}
+.product__price--old {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #6b7090;
+  text-decoration: line-through;
+}
+.product--light .product__badge {
+  background: #66cd57;
+  color: #000033;
+}
+.product--light .product__number {
+  color: #b5ffa6;
+}
+.product--dark .product__badge {
+  background: #000033;
+  color: #ffffff;
+}
+.product--dark .product__number {
+  color: #000033;
+}
+
+/*# sourceMappingURL=main.css.map */
